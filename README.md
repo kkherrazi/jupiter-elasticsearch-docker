@@ -1,7 +1,7 @@
 # jupiter-elasticsearch-docker
 
-Dockerinzing Jupyter Notebook and ElasticSearch. 
-
+Dockerinzing [Jupyter](https://docs.jupyter.org/en/latest/index.html) and [ElasticSearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html).<br> 
+Then request elastichsearch from Jupiter with a **Python** script.
 
 ## Docker compose 
 
@@ -16,7 +16,7 @@ services:
     networks:
       - my_network_from_compose
     volumes:
-      - .:/home/kkherrazi/work
+      - .:/home/jovyan/work
     ports:
       - target: 8888
         published: 4444
@@ -45,9 +45,9 @@ docker-compose up
 
 ````
 ## Jupyter Notebook
-Once the services have been launched, go to the browser with your virtual machine's IP address and port 4444, and you should see the jupyter interface.
+Once the services have been launched, go to the browser with your virtual machine's IP address and port 4444, and you should see the [Jupyter](https://docs.jupyter.org/en/latest/index.html) interface.
 
-In a new notebook, run the following **Python** code:
+In a new notebook, run the following Python code:
 
 ````bash
 import requests
